@@ -1,0 +1,225 @@
+
+body {
+  background: #fff;
+  margin: 0;
+  font-family: 'Oswald';
+}
+
+.sky {
+    height: 250vh;
+    background-image: linear-gradient(125deg, #3e5f77 0%, #00103a 100%);
+    margin: 0%;
+    animation: sky-animation 5.5s 100ms forwards;
+    overflow: hidden;
+    animation-timing-function: ease-in-out;
+}
+
+.parallax-container {
+  position: fixed;
+  overflow: visible;
+  width: 100%;
+  height: 100vh;
+}
+.parallax-layer {
+  width: 100%;
+  height: 160vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-position: bottom center;
+  background-repeat: repeat-x;
+  background-size: cover;
+}
+
+  .layer-0 {
+    top: -100px;
+    z-index: 5;
+    background:
+      url('../imgs/Layer_1_Clouds_flipped.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .layer-1 {
+    top: -60px;
+    z-index: 5;
+    background: url('../imgs/Layer_2_Mountains_flipped.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .layer-2 {
+    top: -50px;
+    z-index: 10;
+    background: url('../imgs/Layer_3_Mountains_flipped.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .layer-3 {
+    top: -20px;
+    z-index: 15;
+    background: url('../imgs/Layer_4_Trees_flipped.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .layer-4 {
+    top: -40px;
+    z-index: 20;
+    background: url('../imgs/Layer_5_Trees_flipped.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .layer-5 {
+    top: 0;
+    z-index: 25;
+    background: url('../imgs/Layer_6_Trees_flipped.png') no-repeat center;
+    background-size: cover;
+  }
+
+ .layer-6 {
+    top: 10%;
+    z-index: 30;
+    background: url('../imgs/Layer_7_Tree_flipped.png') no-repeat;
+    background-position: right bottom;
+    background-size: 75%;
+  }
+
+
+.content {
+  position: absolute;
+  top: 100vh;
+  background: #fff;
+  width: 100%;
+  min-height: 1400px;
+  background: url('../imgs/Layer_8_Grass_flipped.png') no-repeat center;
+  background-position: bottom 100px center;
+  background-size: cover;
+
+  color: #333;
+  font-family: Montserrat, sans-serif;
+  letter-spacing: .15em;
+  font-family: monospace;
+  padding-top: 30px;
+}
+.content-header {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  min-height: 200px;
+  background-color: #fff;
+  width: 100%;
+}
+.content .content-header h1 {
+  position: relative;
+  padding: 10px 0px 15px 30px;
+  text-align: left;
+  font-size: 3.2em;
+  font-weight: normal;
+}
+
+.roles {
+  width: 40%;
+  margin-left: 30px;
+  text-align: left;
+}
+
+.stuff {
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: -400px;
+  background-color: #fff;
+  width: 100%;
+  padding-left: 30px;
+  letter-spacing: normal;
+}
+
+*, *::before, *::after{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #333;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: normal;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.typed {
+  font-size: 2em;
+}
+.typed-cursor {
+  opacity: 1;
+  animation: blink .7s infinite;
+  font-size: 2em;
+}
+.footer {
+  padding: 20px 30px 40px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@keyframes sky-animation {
+    0% {
+        background: #3e5f77;
+    }
+    50% {
+        background-image: none;
+        background-color: #1576b3;
+    }
+    75% {
+        background-image: none;
+        background-color: #335a7e;
+    }
+    90% {
+        background-color: #1b3e55;
+    }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+
+/* MEDIA BREAKPOINTS */
+
+/* @media (max-width: 1440px){
+  header nav {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1000px){
+  header nav {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 992px){
+  header nav {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px){
+  header nav {
+    font-size: 22px;
+  }
+} */
