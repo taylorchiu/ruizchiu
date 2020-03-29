@@ -73,12 +73,22 @@ $(function(){
     backSpeed: 200,
     showCursor: false,
     loop: true,
-    loopCount: 10,
     backDelay: 2000,
   });
 });
 
-// fade out on moon scroll //
-$(window).scroll(function(){
-    $(".moon").css("opacity", 1 - $(window).scrollTop() / 250);
-  });
+// show footer on scroll //
+$(window).scroll(function(event) {
+	function footer(){
+    var scroll = $(window).scrollTop();
+    if(scroll > 500){  $(".footer").fadeIn("slow").addClass("show-footer");}
+    else { $(".footer").fadeOut("slow").removeClass("show-footer");}
+    clearTimeout($.data(this, 'scrollTimer'));
+    $.data(this, 'scrollTimer', setTimeout(function() {
+      if ($('.footer-nav').is(':hover')) {
+    	footer();}
+      else { $(".footer-nav").fadeOut("slow");}
+    }, 2000));
+  }
+  footer();
+});

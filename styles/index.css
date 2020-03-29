@@ -2,11 +2,14 @@
 body {
   background: #fff;
   margin: 0;
-  font-family: 'Oswald';
+  color: white;
+  font-family: Montserrat, sans-serif;
+  /* letter-spacing: .15em; */
+  font-family: monospace;
 }
 
 .sky {
-    height: 250vh;
+    height: 160vh;
     background-image: linear-gradient(125deg, #3e5f77 0%, #00103a 100%);
     margin: 0%;
     animation: sky-animation 5.5s 100ms forwards;
@@ -32,7 +35,7 @@ body {
 }
 
   .layer-0 {
-    top: -100px;
+    top: -270px;
     z-index: 5;
     background:
       url('../imgs/Layer_1_Clouds_flipped.png') no-repeat center;
@@ -40,42 +43,42 @@ body {
   }
 
   .layer-1 {
-    top: -60px;
+    top: -200px;
     z-index: 5;
     background: url('../imgs/Layer_2_Mountains_flipped.png') no-repeat center;
     background-size: cover;
   }
 
   .layer-2 {
-    top: -50px;
+    top: -185px;
     z-index: 10;
     background: url('../imgs/Layer_3_Mountains_flipped.png') no-repeat center;
     background-size: cover;
   }
 
   .layer-3 {
-    top: -20px;
+    top: -240px;
     z-index: 15;
     background: url('../imgs/Layer_4_Trees_flipped.png') no-repeat center;
     background-size: cover;
   }
 
   .layer-4 {
-    top: -40px;
+    top: -320px;
     z-index: 20;
     background: url('../imgs/Layer_5_Trees_flipped.png') no-repeat center;
     background-size: cover;
   }
 
   .layer-5 {
-    top: 0;
+    top: -390px;
     z-index: 25;
     background: url('../imgs/Layer_6_Trees_flipped.png') no-repeat center;
     background-size: cover;
   }
 
  .layer-6 {
-    top: 10%;
+    top: -280px;
     z-index: 30;
     background: url('../imgs/Layer_7_Tree_flipped.png') no-repeat;
     background-position: right bottom;
@@ -85,14 +88,13 @@ body {
 
 .content {
   position: absolute;
-  top: 100vh;
+  top: -22vh;
   background: #fff;
   width: 100%;
   min-height: 1400px;
   background: url('../imgs/Layer_8_Grass_flipped.png') no-repeat center;
-  background-position: bottom 100px center;
+  background-position: bottom center;
   background-size: cover;
-
   color: #333;
   font-family: Montserrat, sans-serif;
   letter-spacing: .15em;
@@ -102,14 +104,14 @@ body {
 .content-header {
   position: absolute;
   display: block;
-  bottom: 0;
+  bottom: -90px;
   min-height: 200px;
   background-color: #fff;
   width: 100%;
 }
 .content .content-header h1 {
   position: relative;
-  padding: 10px 0px 15px 30px;
+  padding: 70px 0px 15px 30px;
   text-align: left;
   font-size: 3.2em;
   font-weight: normal;
@@ -121,15 +123,25 @@ body {
   text-align: left;
 }
 
+.spacer {
+  display: none;
+  /* position: absolute;
+  height: 11vh;
+  border: 1px solid blue;
+  width: 100%;
+  bottom: -100px;
+  background-color: #fff; */
+}
+
 .stuff {
   position: absolute;
   display: block;
-  width: 100%;
-  bottom: -400px;
+  bottom: -620px;
   background-color: #fff;
   width: 100%;
   padding-left: 30px;
   letter-spacing: normal;
+  min-height: 530px;
 }
 
 *, *::before, *::after{
@@ -160,11 +172,31 @@ h2 {
   animation: blink .7s infinite;
   font-size: 2em;
 }
+
 .footer {
+  position: fixed;
+  bottom: 0;
+  display: none;
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  padding-left: 30px;
+  letter-spacing: normal;
+}
+
+.show-footer {
+  display: block;
+}
+
+.footer-content {
   padding: 20px 30px 40px 0px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.warning {
+  display: none;
 }
 
 @keyframes sky-animation {
@@ -184,6 +216,8 @@ h2 {
     }
 }
 
+/* cursor blink effec */
+
 @keyframes blink {
   0% {
     opacity: 1;
@@ -196,9 +230,165 @@ h2 {
   }
 }
 
+/* scroll down arrow animation */
+
+#scroll {
+  padding-top: 80px;
+}
+#scroll span {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: scroll-down 2s infinite;
+  animation: scroll-down 2s infinite;
+  opacity: 0;
+  box-sizing: border-box;
+}
+#scroll span:nth-of-type(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 5s;
+}
+#scroll span:nth-of-type(2) {
+  top: 21px;
+  -webkit-animation-delay: .15s;
+  animation-delay: 5.15s;
+}
+#scroll span:nth-of-type(3) {
+  top: 32px;
+  -webkit-animation-delay: .3s;
+  animation-delay: 5.3s;
+}
+@-webkit-keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 
 /* MEDIA BREAKPOINTS */
+
+/* super short screens - limited experience */
+@media screen and (max-height: 500px) {
+  .layer-0, .layer-1, .layer-2, .layer-3, .layer-4, .layer-5, .layer-6 {
+    display: none;
+  }
+  .content {
+    top: 0;
+    min-height: 600px;
+  }
+  .stuff {
+    bottom: -620px;
+  }
+  .warning {
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+/* short screens */
+@media screen and (min-height: 501px) and (max-height: 600px) {
+  .content {
+    min-height: 660px;
+  }
+
+  .layer-0, .layer-6 {
+    display: none;
+  }
+  .layer-1 {
+    top: -145px;
+  }
+  .layer-2 {
+    top: -130px;
+  }
+
+  .sky {
+    height: 200vh
+  }
+  .stuff {
+    bottom: -600px;
+  }
+}
+
+/* short-medium screens */
+@media screen and (min-height: 601px) and (max-height: 700px) {
+  .layer-0 {
+    display: none;
+  }
+  .layer-1 {
+    top: -120px;
+  }
+  .layer-2 {
+    top: -105px;
+  }
+  .layer-4 {
+    top: -225px;
+  }
+  .layer-5 {
+    top: -365px;
+  }
+  .layer-6 {
+    display: none;
+  }
+  .content {
+    top: 1vh;
+    min-height: 830px;
+  }
+  .content-header {
+    bottom: -80px;
+  }
+  .spacer {
+    display: none;
+  }
+  .stuff {
+    bottom: -600px;
+  }
+}
+
+@media screen and (min-height: 701px) and (max-height: 900px) {
+  .content {
+    top: -50vh;
+  }
+  .layer-3 {
+    top: -280px;
+  }
+  .layer-4 {
+    top: -350px;
+  }
+  .layer-5 {
+    top: -445px;
+  }
+  .layer-6 {
+    top: -200px;
+    background-position: right 100px bottom;
+  }
+}
+
+
 
 /* @media (max-width: 1440px){
   header nav {
