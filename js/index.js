@@ -65,7 +65,7 @@ ParallaxManager = (function() {
 new ParallaxManager('.parallax-layer');
 
 
-// typed.js //
+// typed.js thanks to https://github.com/mattboldt/typed.js/  //
 $(function(){
   $(".typed").typed({
     strings: ["Educator.", "Engineer.", "Mentor.", "Diversity Advocate.", "Engineering Manager."],
