@@ -184,6 +184,10 @@ h2 {
   letter-spacing: normal;
 }
 
+.mobile-footer {
+  display: none;
+}
+
 .show-footer {
   display: block;
 }
@@ -386,6 +390,57 @@ h2 {
     top: -200px;
     background-position: right 100px bottom;
   }
+}
+
+@media screen and (max-width: 780px) {
+  .parallax-container {
+    display: none;
+  }
+  .content {
+    position: relative;
+    top: 0px;
+    min-height: 750px;
+    background: url('../imgs/resized/Final_All_small.png') no-repeat center;
+    background-position: top center;
+  }
+  .content-header {
+    position: relative;
+    bottom: auto;
+    background-color: transparent;
+  }
+  .mobile-footer {
+    position: relative;
+    display: block;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 30px;
+    letter-spacing: normal;
+  }
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-content span {
+    padding: 5px 0 5px 0;
+  }
+  .roles {
+    width: 100%;
+  }
+  #scroll {
+    display: none;
+  }
+  .sky {
+    display: none;
+  }
+  .stuff {
+    position: relative;
+    top: 0;
+    background-color: transparent;
+    min-height: auto;
+    padding-top: 500px;
+  }
+
 }
 
 
