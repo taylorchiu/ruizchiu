@@ -38,49 +38,49 @@ body {
     top: -270px;
     z-index: 5;
     background:
-      url('../imgs/resized/Layer_1_Clouds_flipped.png') no-repeat center;
+      url('https://ruizchiu.s3-us-west-1.amazonaws.com/Layer_1_Clouds_flipped.png') no-repeat center;
     background-size: cover;
   }
 
   .layer-1 {
     top: -200px;
     z-index: 5;
-    background: url('../imgs/resized/Layer_2_Mountains_flipped.png') no-repeat center;
+    background: url('https://ruizchiu.s3-us-west-1.amazonaws.com/Layer_2_Mountains_flipped.png') no-repeat center;
     background-size: cover;
   }
 
   .layer-2 {
     top: -185px;
     z-index: 10;
-    background: url('../imgs/resized/Layer_3_Mountains_flipped.png') no-repeat center;
+    background: url('https://ruizchiu.s3-us-west-1.amazonaws.com/Layer_3_Mountains_flipped.png') no-repeat center;
     background-size: cover;
   }
 
   .layer-3 {
     top: -240px;
     z-index: 15;
-    background: url('../imgs/resized/Layer_4_Trees_flipped.png') no-repeat center;
+    background: url('https://ruizchiu.s3-us-west-1.amazonaws.com/Layer_4_Trees_flipped.png') no-repeat center;
     background-size: cover;
   }
 
   .layer-4 {
     top: -320px;
     z-index: 20;
-    background: url('../imgs/resized/Layer_5_Trees_flipped.png') no-repeat center;
+    background: url('https://ruizchiu.s3-us-west-1.amazonaws.com/Layer_5_Trees_flipped.png') no-repeat center;
     background-size: cover;
   }
 
   .layer-5 {
     top: -390px;
     z-index: 25;
-    background: url('../imgs/resized/Layer_6_Trees_flipped.png') no-repeat center;
+    background: url('https://ruizchiu.s3-us-west-1.amazonaws.com/Layer_6_Trees_flipped.png') no-repeat center;
     background-size: cover;
   }
 
  .layer-6 {
     top: -280px;
     z-index: 30;
-    background: url('../imgs/resized/Layer_7_Tree_flipped.png') no-repeat;
+    background: url('https://ruizchiu.s3-us-west-1.amazonaws.com/Layer_7_Tree_flipped.png') no-repeat;
     background-position: right bottom;
     background-size: 75%;
   }
@@ -92,7 +92,7 @@ body {
   background: #fff;
   width: 100%;
   min-height: 1400px;
-  background: url('../imgs/resized/Layer_8_Grass_flipped.png') no-repeat center;
+  background: url('https://ruizchiu.s3-us-west-1.amazonaws.com/Layer_8_Grass_flipped.png') no-repeat center;
   background-position: bottom center;
   background-size: cover;
   color: #333;
@@ -400,7 +400,7 @@ h2 {
     position: relative;
     top: 0px;
     min-height: 750px;
-    background: url('../imgs/resized/Final_All_small.png') no-repeat center;
+    background: url('https://ruizchiu.s3-us-west-1.amazonaws.com/Final_All_small.png') no-repeat center;
     background-position: top center;
   }
   .content-header {
@@ -439,6 +439,7 @@ h2 {
     background-color: transparent;
     min-height: auto;
     padding-top: 500px;
+    padding-right: 30px;
   }
 
 }
